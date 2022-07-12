@@ -6,9 +6,9 @@
 
 This virtual kit creates a simple room temperature monitor using the AVR&reg; DD microcontroller to communicate with an MLX90632 Far InfraRed (FIR) sensor to measure the temperature of an object (which is assumed to represent the room's temperature). Communication with the MLX90632 is over I<sup>2</sup>C and data is sent to the computer over UART. Measurements from this demo can be read in plaintext on a serial terminal, or can be plotted over time in MPLAB&reg; Data Visualizer.
 
-This demo was co-developed with Melexis
+This code example was created from the [Window Security Sensor with an AVR DB, MLX90632, and MLX90392](https://github.com/microchip-pic-avr-examples/avr128db28-smart-security-sensor-mplab) demo and co-developed with Melexis.
 
-![Melexis](./images/melexis.png)
+![Melexis](./images/melexis.png)  
 
 ## Related Documentation
 
@@ -31,7 +31,7 @@ This demo was co-developed with Melexis
 
 ### Hardware Setup
 
-Connect the IR Thermo 3 Click to any of the slots on the Curiosity Nano Base Board. Operating voltage was set at 3.3V.
+Connect the IR Thermo 3 Click to any of the slots on the Curiosity Nano Base Board. The operating voltage of the Click was set at 3.3V.
 
 ### I/O Usage
 
@@ -109,7 +109,7 @@ The temperature unit is set by `#define DEFAULT_TEMP_UNIT` in **tempMonitor.h**.
 - 'F' = Fahrenheit
 - 'K' = Kelvin
 
-Please note, the unit specifiers are *case sensitive*. If an invalid specifier is set, the program will default to Celsius.
+Please note, the unit specifiers are *case-sensitive*. If an invalid specifier is set, the program will default to Celsius.
 
 ## Theory of Operation
 
@@ -121,7 +121,7 @@ This feature can be bypassed by holding SW0 down when powering up the Curiosity 
 
 ### Main Loop
 
-The main loop of this program is fairly simple. The microcontroller runs a state-machine that controls the sampling and data processing of the measurement data from the FIR sensor. If the data is ready to printed, then the microcontroller will also print the data to the UART. After performing these actions, the microcontroller will enter sleep until the Real Time Clock (RTC) wakes it up to repeat the cycle.
+The microcontroller runs a state machine that controls the sampling and data processing of the measurement data from the FIR sensor. If the data is ready to printed, then the microcontroller will also print the data to the UART. After performing these actions, the microcontroller will enter sleep until the Real Time Clock (RTC) wakes it up to repeat the cycle.
 
 ### FIR Sensor State Machine
 
@@ -136,7 +136,7 @@ In `TEMP_START`, the sensor is triggered to begin acquiring a new measurement. T
 
 In `TEMP_WAIT`, the sensor is polled to see if new results are ready. If they are not ready, the state machine remains in `TEMP_WAIT`. If results are ready, and no error occurs during data transfer, then the state machine transitions to `TEMP_RESULTS`. If an error occurs during result reading, then the state machine is moved to the `TEMP_ERROR` state.
 
-In `TEMP_RESULTS`, the data received from the sensor is processed to get a temperature value. This step is the slowest state, as the calculation function is an iterative function with floating point operations and square roots.
+In `TEMP_RESULTS`, the data received from the sensor is processed to get a temperature value. This step is the slowest state, as the calculation function is an iterative function with floating point operations and square roots. Additionally, results are printed here.
 
 In `TEMP_ERROR`, nothing will occur. If a program enters this state, a reset of the microcontroller is required. Depending on what triggered this state, a power cycle of the sensor may also be required. This state is usually triggered by an I<sup>2</sup>C communication failure.
 

@@ -63,6 +63,8 @@ int main(void)
         {
             tempMonitor_printResults();
         }
+        
+        asm("SLEEP");
 
     }    
 }
