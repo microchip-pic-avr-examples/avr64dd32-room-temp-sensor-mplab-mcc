@@ -209,7 +209,7 @@ void tempMonitor_printResults(void)
 #else
         
     //Data to send
-    char text[11];
+    uint8_t text[10];
     
     //Header Start
     text[0] = 0xAA;
@@ -224,13 +224,21 @@ void tempMonitor_printResults(void)
     text[7] = (((0xFF0000) & sensorTemp.hexCode) >> 16) & 0xFF;
     text[8] = (((0xFF000000) & sensorTemp.hexCode) >> 24) & 0xFF;
     
-    //Head End
+    //Header End
     text[9] = 0x55;
     
-    //Null Terminator for String
-    text[10] = 0x00;
+    uint8_t index = 0;
     
-    printf(&text[0]);
+    //Transmit Payload
+    while (index < 10)
+    {
+        if (USART0_IsTxReady())
+        {
+            USART0_Write(text[index]);
+            index++;
+        }
+        
+    }
     
 #endif
     //Print String

@@ -13,18 +13,18 @@ This demo was co-developed with Melexis
 ## Related Documentation
 
 - [MLX90632 Sensor Homepage](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC)
-- [AVR64DD32 Product Page](#)
+- [AVR64DD32 Product Page](https://www.microchip.com/en-us/product/AVR64DD32?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
 
 ## Software Used
 
-- [MPLAB X IDE v6.00 or newer](#)
-- [MPLAB XC8 v2.36 or newer](#)
-- [MPLAB Data Visualizer](#)
+- [MPLAB X IDE v6.00 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
+- [MPLAB XC8 v2.36 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
+- [MPLAB Data Visualizer](https://www.microchip.com/en-us/tools-resources/debug/mplab-data-visualizer?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
 
 ## Hardware Used
 
-- [AVR64DD32 Curiosity Nano (???)](#)
-- [Curiosity Nano Base for Click&trade; (AC164162)](#)
+- [AVR64DD32 Curiosity Nano (EV72Y42A)](https://www.microchip.com/en-us/development-tool/EV72Y42A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
+- [Curiosity Nano Base for Click&trade; (AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdd&utm_content=avrdd-room-temp-sensor-mplab-mcc-github)
 - [IR Thermo 3 Click by MikroE](https://www.mikroe.com/ir-thermo-3-click)
 
 ## Setup
