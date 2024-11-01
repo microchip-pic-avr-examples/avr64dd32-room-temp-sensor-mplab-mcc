@@ -33,16 +33,18 @@ This code example was created from the [Window Security Sensor with an AVR DB, M
 
 Connect the IR Thermo 3 Click to any of the slots on the Curiosity Nano Base Board. The operating voltage of the Click was set at 3.3V.
 
+![Click Setup](./images/setup.JPG)
+
 ### I/O Usage
 
 | I/O Pin | Description
 | ------- | ----------
 | PA2 | I<sup>2</sup>C SDA
 | PA3 | I<sup>2</sup>C SCL
-| PB0 | UART TX
-| PB1 | UART RX (unused, but reserved)
-| PB2 | SW0 - Safe Mode Button
-| PD3 | On-Board LED (changes states when results are ready)
+| PD4 | UART RX (unused, but reserved)
+| PD5 | UART TX
+| PF6 | SW0 - Safe Mode Button
+| PF5 | On-Board LED (changes states when results are ready)
 
 
 ### Data Visualizer Setup

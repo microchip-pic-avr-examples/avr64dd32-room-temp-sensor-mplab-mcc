@@ -38,10 +38,10 @@ void USART0_initIO(void)
     //Default Value for output should be 1
     PORTD.OUTSET = PIN4_bm;
     
-    //Set PC0 as Output
+    //Set PD4 as Output
     PORTD.DIRSET = PIN4_bm;
         
-    //Set PC1 as Input
+    //Set PD5 as Input
     PORTD.DIRCLR = PIN5_bm;
     
     //Configure PORTMUX
